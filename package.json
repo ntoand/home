@@ -1,0 +1,30 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "Toan Nguyen Homepage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntoand/home.git"
+  },
+  "keywords": [
+    "Toan",
+    "Nguyen",
+    "Toan",
+    "Dinh",
+    "Nguyen",
+    "Homepage",
+    "Portfolio",
+    "Research",
+    "Project"
+  ],
+  "author": "Toan Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntoand/home/issues"
+  },
+  "homepage": "https://github.com/ntoand/home#readme"
+}
