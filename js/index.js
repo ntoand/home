@@ -1,3 +1,11 @@
-particlesJS.load('particles-js', 'js/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+(function ($) {
+  "use strict";
+
+  // particles
+  particlesJS.load('particles-js', 'js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
+  //
+
+})(jQuery);
