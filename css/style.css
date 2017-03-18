@@ -1,119 +1,36 @@
-/* general */
-html, body {
-	height: 100%;
-}
-.floatleft {
-	float:left;
-}
-.floatright {
-	float:right;
-}
-.alignleft {
-	float:left;
-	margin-right:15px;
-	margin-bottom: 15px;
-}
-.alignright {
-	float:right;
-	margin-left:15px;
-	margin-bottom: 15px;
-}
-.aligncenter {
-	display:block;
-	margin:0 auto 15px;
-}
-a:focus {
-	outline:0px solid;
-}
-img {max-width:100%;
-	height:auto;
-}
-.fix {
-	overflow:hidden;
-}
-p {
-	margin:0 0 15px;
-    color: #444;
-}
-h1, h2, h3, h4, h5, h6 {
-   margin: 0 0 10px;
-   color: #444;
-  line-height: normal;
-  font-family: 'Ubuntu', sans-serif;
-}
- a {
-	transition: all 0.3s ease 0s;
-	text-decoration:none;
-}
-a:hover {
-  color: #252525;
-  text-decoration: none;
-}
-a:active, a:hover {
-  outline: 0 none;
-}
-ul{
-list-style: outside none none;
-margin: 0;
-padding: 0;
-}
-#scrollUp {
-  background: #000 none repeat scroll 0 0;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  bottom: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  color: #fff;
-  font-size: 28px;
-  height: 45px;
-  line-height: 40px;
-  opacity: 0.6;
-  right: 15px;
-  text-align: center;
-  transition: all 0.3s ease 0s;
-  width: 45px;
-}
-#scrollUp:hover {
-    background: #252525;
-    opacity: 1;
-    border: 1px solid #252525;
-}
-.area-padding {
-  padding: 60px 0;
-}
-.clear{
-	clear:both;
-}
-input, select, textarea, input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], button, button[type="submit"] {
-  -moz-appearance: none;
-  box-shadow: none !important;
-}
-div#preloader { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background: #fff url('img/logo/preloader.gif') no-repeat center center; }
-body {
-  background: #fff none repeat scroll 0 0;
-  color: #999999;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 14px;
-  text-align: left;
-  overflow-x: hidden;
-  line-height: 22px;
-}
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 /*----------------------------------------*/
-/*  2. Header Area
+/*  General
+/*----------------------------------------*/
+.section-header-dark {
+	padding: 40px 30px 0 0;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #41505C;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+}
+
+.section-header-light {
+	padding: 40px 30px 0 0;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #d82c2e;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+}
+
+.section-background-dark {
+	background-color: #f7f8f8;
+}
+
+.text-block-dark {
+	padding: 0px 0;
+	font-weight: 600;
+	color: #777;
+}
+
+/*----------------------------------------*/
+/*  Header Area
 /*----------------------------------------*/
 .header-area {
   background: transparent none repeat scroll 0 0;
@@ -229,4 +146,99 @@ Intro content
 .contact-icon {
 	padding-left: 10px;
 	padding-right: 5px;
+}
+
+/*----------------------------------------
+Skill section
+----------------------------------------*/
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+
+#section-skills h2 {
+	padding-top: 5px;
+	font-size: 18px;
+	color: #777;
+}
+
+#section-award li {
+	padding: 2px 0	;
+	font-weight: 600;
+	color: #777;
+}
+
+/*----------------------------------------*/
+/*  Header Area
+/*----------------------------------------*/
+footer {
+	background-color: #777;
 }
