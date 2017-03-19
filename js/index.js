@@ -15,35 +15,33 @@ jQuery(document).ready(function(){
     console.log('callback - particles.js config loaded');
   });
 
-  // skillbar
-  /*
-  jQuery('.skillbar').each(function(){
-    jQuery(this).find('.skillbar-bar').animate({
-      width:jQuery(this).attr('data-percent')
-    },5000);
-  });
-  */
+  // skill chart
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
 
-  $(window).scroll( function(){
+  function drawChart() {
 
-    /* Check the location of each desired element */
-    jQuery('.skillbar').each( function(i){
+    var data = google.visualization.arrayToDataTable([
+      ['Skill', 'Percentage'],
+      ['C/C++',     10],
+      ['Matlab',    8],
+      ['OpenGL',    6],
+      ['Python',    6],
+      ['CUDA',      5],
+      ['Html/Css',  5],
+      ['Javascript', 5],
+      ['Bash',      3]
+    ]);
 
-      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
+    var options = {
+      is3D: true,
+      chartArea:{left:0,top:'20%',width:'100%',height:'80%'},
+      legend: {position: 'top'}
+    };
 
-      /* If the object is completely visible in the window, fade it in */
-      if( bottom_of_window > bottom_of_object ){
+    var chart = new google.visualization.PieChart(document.getElementById('skill-chart'));
 
-        jQuery(this).find('.skillbar-bar').animate({
-          width:jQuery(this).attr('data-percent')
-        },2000);
-
-      }
-
-    });
-
-  });
-
+    chart.draw(data, options);
+  }
 
 });
