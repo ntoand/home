@@ -181,12 +181,12 @@ Intro content
 Skill & award sections
 ----------------------------------------*/
 #section-skills h2 {
-	padding-top: 15px;
+	padding-top: 10px;
 	font-size: 18px;
 	color: #777;
 }
 #section-skills li {
-	color: #555;
+	color: #333;
 }
 #skill-chart {
 	width: 100%;
@@ -204,60 +204,8 @@ Skill & award sections
 /*----------------------------------------*/
 footer {
 	background-color: #777;
-	color: #eee;
-}
-.copyright {
-	padding-top: 10px;
-}
-.social {
-	text-align: right;
 }
 
 /*----------------------------------------*/
 /*  Publication
 /*----------------------------------------*/
-.paper-filter {
-	padding: 20px 0px;
-}
-.paper-filter button {
-	background:transparent;
-	border: none;
-	padding:5px 20px;
-	text-decoration:none;
-	color:#666;
-	cursor: pointer;
-	font-weight: 600;
-}
-.paper-filter button:hover {
-	color:#d82c2e;
-}
-.paper-filter button:focus {
-	outline:0;
-	color:#d82c2e;
-}
-.paper-container li {
-	padding: 4px 0px;
-	font-weight: 500;
-	color: #555;
-}
-.paper-container li b {
-	padding: 4px 0px;
-	font-weight: 600;
-	color: #555;
-}
-.paper-container li i {
-	padding: 4px 0px;
-	font-weight: 500;
-	color: #555;
-	font-style: italic;
-}
-.paper-container h2 {
-	padding-top: 20px;
-	padding-bottom: 10px;
-	font-size: 18px;
-	color: #333;
-	font-weight: 600;
-}
-.hide {
-	opacity: 0;
-}
