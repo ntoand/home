@@ -214,27 +214,38 @@ footer {
 }
 
 /*----------------------------------------*/
-/*  Publication
+/*  Filters
 /*----------------------------------------*/
-.paper-filter {
-	padding: 20px 0px;
+#filters {
+	margin:0;
+	padding-bottom: 10px;
+	list-style:none;
 }
-.paper-filter button {
-	background:transparent;
-	border: none;
+
+#filters li {
+	float:left;
+}
+
+#filters li span {
+	display: block;
 	padding:5px 20px;
 	text-decoration:none;
 	color:#666;
 	cursor: pointer;
-	font-weight: 600;
+	font-weight: bold;
 }
-.paper-filter button:hover {
-	color:#d82c2e;
+.mixitup-control-active {
+  background: #e95a44;
+	color: #fff !important;
 }
-.paper-filter button:focus {
-	outline:0;
-	color:#d82c2e;
+
+.mixitup-control-active[data-filter]:after {
+  background: transparent;
 }
+
+/*----------------------------------------*/
+/*  Publication
+/*----------------------------------------*/
 .paper-container li {
 	padding: 4px 0px;
 	font-weight: 500;

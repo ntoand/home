@@ -14,27 +14,31 @@
   <link rel="stylesheet" href="/public/css/style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
 </head>
 
 <body>
 
   <div id="header"></div>
 
-  <div class="col-xs-12" style="height:150px;"></div>
+  <div class="col-xs-12" style="height:200px;"></div>
 
   <div class="container">
     <h1 class="section-header-dark">Publication</h1>
-    <div class="paper-filter">
-        <button type="button" data-filter="all">All</button>
-        <button type="button" data-filter=".y2016">2016</button>
-        <button type="button" data-filter=".y2015">2015</button>
-        <button type="button" data-filter=".y2014">2014</button>
-        <button type="button" data-filter=".y2013">2013</button>
-        <button type="button" data-filter=".y2012">2012</button>
-        <button type="button" data-filter=".y2011">2011</button>
-        <button type="button" data-filter=".other">Others</button>
-        <a target="_blank" href="https://scholar.google.com.au/citations?hl=en&user=GvwdjLEAAAAJ"><button>(Google Scholar)</button></a>
-    </div>
+    <div class="col-xs-12" style="height:30px;"></div>
+
+    <ul id="filters" class="clearfix">
+      <li><span class="filter" data-filter="all">All</span></li>
+      <li><span class="filter" data-filter=".y2016">2016</span></li>
+      <li><span class="filter" data-filter=".y2015">2015</span></li>
+      <li><span class="filter" data-filter=".y2014">2014</span></li>
+      <li><span class="filter" data-filter=".y2013">2013</span></li>
+      <li><span class="filter" data-filter=".y2012">2012</span></li>
+      <li><span class="filter" data-filter=".y2011">2011</span></li>
+      <li><span class="filter" data-filter=".other">until 2010</span></li>
+      <a target="_blank" href="https://scholar.google.com.au/citations?hl=en&user=GvwdjLEAAAAJ"><li><span>(Google Scholar)</span></li></a>
+    </ul>
+
     <div class="paper-container">
       <h2>Refereed Journal Articles</h2>
       <ul>
@@ -106,22 +110,30 @@
 
   <script src="/public/js/header-footer.js"></script>
   <script src="/public/js/lib/mixitup.min.js"></script>
-  <script>
-    var mixer = mixitup('.paper-container', {
-      animation: {
-        effects: 'fade translateX(100%)',
-        reverseOut: true,
-        nudge: false // Disable nudging to create a carousel-like effect
-      },
-      callbacks: {
-        onMixStart: function(state, futureState) {
-             $('#paper-conference-header').addClass('hide');
+
+  <script type="text/javascript">
+
+    $(function () {
+      var mixer = mixItUp('.paper-container', {
+        animation: {
+          effects: 'fade translateX(100%)',
+          reverseOut: true,
+          nudge: false // Disable nudging to create a carousel-like effect
         },
-        onMixEnd: function(state) {
-             $('#paper-conference-header').removeClass('hide');
+        callbacks: {
+          onMixStart: function(state, futureState) {
+               $('#paper-conference-header').addClass('hide');
+          },
+          onMixEnd: function(state) {
+               $('#paper-conference-header').removeClass('hide');
+          }
+        },
+        load: {
+          filter: 'all'
         }
-    }
+      });
     });
+
   </script>
 </body>
 
