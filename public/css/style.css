@@ -32,6 +32,13 @@
 /*----------------------------------------*/
 /*  Header Area
 /*----------------------------------------*/
+.logo-header {
+	vertical-align: center;
+	padding-top: 8px;
+}
+.logo-header-mobile {
+	max-width: 200px;
+}
 .header-area {
   background: transparent none repeat scroll 0 0;
   display: block;
