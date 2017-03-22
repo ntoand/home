@@ -400,3 +400,37 @@ footer {
         width:100%;
     }
 }
+
+/*----------------------------------------*/
+/*  Contact
+/*----------------------------------------*/
+#contact-form input::-webkit-input-placeholder {color:#aaa;}
+#contact-form input::-moz-placeholder {color:#aaa;}
+#contact-form input::-moz-placeholder {color:#aaa;}
+#contact-form input::-ms-input-placeholder {color:#aaa;}
+#contact-form textarea::-webkit-input-placeholder {color:#aaa;}
+#contact-form textarea::-moz-placeholder {color:#aaa;}
+#contact-form textarea::-moz-placeholder {color:#aaa;}
+#contact-form textarea::-ms-input-placeholder {color:#aaa;}
+
+#contact2 {
+	padding-left: 5%;
+}
+#contact2 h2{
+	padding: 0px 20px 0 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+#contact2 .contact-social {
+	padding: 0 20px 10px 10px;
+}
+#contact2 li {
+	color: #41505C;
+	font-weight: bold;
+	padding: 4px 0;
+}
+#contact2 a {
+	text-decoration: none;
+	color: #41505C;
+	font-weight: bold;
+}
