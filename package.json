@@ -1,30 +1,31 @@
 {
-  "name": "homepage",
+  "name": "home",
   "version": "1.0.0",
-  "description": "Toan Nguyen Homepage",
+  "description": "Toan Nguyen homepage",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ntoand/home.git"
-  },
   "keywords": [
-    "Toan",
-    "Nguyen",
     "Toan",
     "Dinh",
     "Nguyen",
-    "Homepage",
-    "Portfolio",
-    "Research",
-    "Project"
+    "homepage",
+    "portfolio"
   ],
   "author": "Toan Nguyen",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ntoand/home/issues"
+  "dependencies": {
   },
-  "homepage": "https://github.com/ntoand/home#readme"
+  "devDependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11"
+  }
 }
