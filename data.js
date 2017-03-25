@@ -11,7 +11,7 @@ exports.data = {
         title: "Home",
         description: "Homepage",
         keywords: "Toan Dinh Nguyen, homepage, portfolio, 3D, graphics, visualisation",
-        scripts: ["http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js", "https://www.gstatic.com/charts/loader.js",
+        scripts: ["https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js", "https://www.gstatic.com/charts/loader.js",
                     "/public/js/lib/timeline.min.js", "/public/js/index.min.js"]
       },
       {
