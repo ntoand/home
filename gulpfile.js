@@ -6,7 +6,8 @@ var run = require('gulp-run');
 var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 
-js_files = ['src/js/index.js', 'src/js/publication.js','src/js/lib/timeline.js'];
+js_files = ['src/js/index.js', 'src/js/work.js',
+            'src/js/publication.js', 'src/js/lib/timeline.js'];
 
 function getArg(key) {
   var index = process.argv.indexOf(key);

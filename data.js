@@ -19,7 +19,7 @@ exports.data = {
         title: "Work",
         description: "Portfolio",
         keywords: "Toan Dinh Nguyen, work, portfolio",
-        scripts: []
+        scripts: ["{{baseurl}}/public/js/lib/mixitup.min.js", "{{baseurl}}/public/js/work.min.js"]
       },
       {
         ejs: "publication/index.ejs",
