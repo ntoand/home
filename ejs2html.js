@@ -49,12 +49,17 @@ for (var i=0; i < pages.length; i++) {
   outfile = __dirname + '/' + outdir + '/' + pages[i].ejs;
   outfile = outfile.replace('.ejs', '.html');
 
+  scripts = pages[i].scripts;
+  for(var j=0; j < scripts.length; j++) {
+    scripts[j] = scripts[j].replace("{{baseurl}}", baseurl);
+  }
+
   options = {};
   options.meta = {};
   options.meta.title = pages[i].title;
   options.meta.description = pages[i].description;
   options.meta.keywords = pages[i].keywords;
-  options.scripts = pages[i].scripts;
+  options.scripts = scripts;
   options.filename = ejsfile;
   options.baseurl = baseurl;
 

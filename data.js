@@ -12,7 +12,7 @@ exports.data = {
         description: "Homepage",
         keywords: "Toan Dinh Nguyen, homepage, portfolio, 3D, graphics, visualisation",
         scripts: ["https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js", "https://www.gstatic.com/charts/loader.js",
-                    "/public/js/lib/timeline.min.js", "/public/js/index.min.js"]
+                    "{{baseurl}}/public/js/lib/timeline.min.js", "{{baseurl}}/public/js/index.min.js"]
       },
       {
         ejs: "work/index.ejs",
@@ -26,7 +26,7 @@ exports.data = {
         title: "Publication",
         description: "Publication",
         keywords: "Toan Dinh Nguyen, research",
-        scripts: ["/public/js/lib/mixitup.min.js", "/public/js/publication.min.js"]
+        scripts: ["{{baseurl}}/public/js/lib/mixitup.min.js", "{{baseurl}}/public/js/publication.min.js"]
       },
       {
         ejs: "contact/index.ejs",
