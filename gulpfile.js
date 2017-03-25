@@ -26,8 +26,12 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy', function () {
-  return gulp.src(['src/css/**/*','src/imgs/**/*','src/js/particles.json','src/js/lib/mixitup.min.js'], { "base" : "./src" })
+  gulp.src(['src/css/**/*','src/imgs/**/*','src/js/particles.json','src/js/lib/mixitup.min.js'],
+                  { "base" : "./src" })
             .pipe(gulp.dest(dir + '/public'));
+
+  gulp.src(['CNAME'])
+            .pipe(gulp.dest(dir));
 });
 
 gulp.task('compress', function () {
