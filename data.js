@@ -1,9 +1,9 @@
 exports.data = {
   global: {
     templatefile: "src/views/template.ejs",
-    outdir: "dist",
     pagedir: "src/views/pages",
-    sitename: "Toan Nguyen"
+    sitename: "Toan Nguyen",
+    baseurl: "https://ntoand.github.io/home"
   },
   pages: [
       {

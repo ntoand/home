@@ -31,12 +31,22 @@ function ejs2html(templatefile, ejsfile, outfile, options) {
   }
 }
 
+// main
 info = data.data.global;
 pages = data.data.pages;
+
+//preview or production?
+var baseurl = '';
+var outdir = 'preview';
+if (process.argv.length == 3 && process.argv[2] === 'production') {
+  baseurl = info.baseurl;
+  outdir = 'dist';
+}
+
 for (var i=0; i < pages.length; i++) {
   templatefile = __dirname + '/' + info.templatefile;
   ejsfile = __dirname + '/' + info.pagedir + '/' + pages[i].ejs;
-  outfile = __dirname + '/' + info.outdir + '/' + pages[i].ejs;
+  outfile = __dirname + '/' + outdir + '/' + pages[i].ejs;
   outfile = outfile.replace('.ejs', '.html');
 
   options = {};
@@ -46,6 +56,7 @@ for (var i=0; i < pages.length; i++) {
   options.meta.keywords = pages[i].keywords;
   options.scripts = pages[i].scripts;
   options.filename = ejsfile;
+  options.baseurl = baseurl;
 
   var nlevels = (pages[i].ejs.match(/\//g) || []).length + 1;
   options.relative_path = '';
