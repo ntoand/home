@@ -56,5 +56,5 @@ gulp.task('default', ['copy', 'compress', 'compile', 'sass']);
 gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['compress']);
   gulp.watch('src/views/**/*.ejs', ['compile']);
-  gulp.watch('src/css/**/*.scss', ['sass']);
+  gulp.watch('src/scss/**/*.scss', ['sass']);
 });

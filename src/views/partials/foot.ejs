@@ -5,5 +5,11 @@
   <% for(var i=0; i<scripts.length; i++) {%>
   <script src="<%= scripts[i] %>"></script>
   <% } %>
+
+  <script>
+    $("#bars-icon").on("click", function() {
+        $("#mobile-nav").toggleClass("open");
+    });
+  </script>
 </body>
 </html>
