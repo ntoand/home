@@ -10,6 +10,11 @@
     $("#bars-icon").on("click", function() {
         $("#mobile-nav").toggleClass("open");
     });
+
+    $("#gototop").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
   </script>
 </body>
 </html>

@@ -16,17 +16,17 @@
   ],
   "author": "Toan Nguyen",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "del": "^2.2.2",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
-    "gulp-watch": "^4.3.11"
+    "gulp-watch": "^4.3.11",
+    "marky-mark": "^1.2.1"
   }
 }

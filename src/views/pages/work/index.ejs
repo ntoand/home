@@ -2,9 +2,8 @@
 
   <div class="container">
 
-    <div class="jumbotron">
-      <h1 class="section-header-dark">Selected works</h1>
-    </div>
+    <h1 class="section-header-dark">Work</h1>
+    <p>Some selected projects</p>
 
     <div class="col-xs-12" style="height:30px;"></div>
 
@@ -20,82 +19,19 @@
 
     <ul id="rig">
 
-      <li class="mix visualisation" data-order= "1">
-          <a class="rig-cell" href="#">
-              <img class="rig-img" src="<%= baseurl %>/public/imgs/work/2015-vsviewer/01.jpg" />
+      <% if(works) %>
+      <% for(var i=0; i<works.length; i++) {%>
+      <li class="mix <%= works[i].meta.categories %>">
+          <a class="rig-cell" href="<%= baseurl %>/work/<%= works[i].filename %>.html">
+              <img class="rig-img" src="<%= baseurl %>/<%= works[i].meta.image %>" />
               <span class="rig-overlay"></span>
               <span class="rig-text">
-                <h2>vsviewer</h2>
-                <p>Visual slice viewer for desktop/cluster</p>
+                <h2><%= works[i].meta.title %></h2>
+                <p><%= works[i].meta.description %></p>
               </span>
           </a>
       </li>
-
-      <li class="mix research" data-order= "1">
-          <a class="rig-cell" href="#">
-              <img class="rig-img" src="<%= baseurl %>/public/imgs/work/2007-transcoder/01.jpg" />
-              <span class="rig-overlay"></span>
-              <span class="rig-text">
-                <h2>MPEG4 to H.264 transcoder</h2>
-                <p>Fast video transcoding</p>
-              </span>
-          </a>
-      </li>
-
-      <li class="mix research" data-order= "1">
-          <a class="rig-cell" href="#">
-              <img class="rig-img" src="<%= baseurl %>/public/imgs/work/2007-dvc/01.jpg" />
-              <span class="rig-overlay"></span>
-              <span class="rig-text">
-                <h2>Distributed video coding</h2>
-                <p>C/C++ DVC implementation</p>
-              </span>
-          </a>
-      </li>
-
-      <li class="mix visualisation" data-order= "1">
-          <a class="rig-cell" href="/work/2005-nwfc.html">
-              <img class="rig-img" src="<%= baseurl %>/public/imgs/work/2005-nwfc/01.jpg" />
-              <span class="rig-overlay"></span>
-              <span class="rig-text">
-                <h2>NWFC game engine</h2>
-                <p>DirectX 3D game engine and Dead Rising game</p>
-              </span>
-          </a>
-      </li>
-
-      <li class="mix system" data-order= "1">
-          <a class="rig-cell" href="#">
-              <img class="rig-img" src="http://placehold.it/800x400" />
-              <span class="rig-overlay"></span>
-              <span class="rig-text">
-                <h2>Lorem Ipsum DolorThis is small title</h2>
-                <p>This is description</p>
-              </span>
-          </a>
-      </li>
-
-      <li class="mix visualisation" data-order= "1">
-          <a class="rig-cell" href="#">
-              <img class="rig-img" src="http://placehold.it/800x400" />
-              <span class="rig-overlay"></span>
-              <span class="rig-text">
-                <h2>Lorem Ipsum DolorThis is small title</h2>
-                <p>This is description</p>
-              </span>
-          </a>
-      </li>
-
-      <li class="mix misc" data-order= "1">
-          <a class="rig-cell" href="#">
-              <img class="rig-img" src="http://placehold.it/800x400" />
-              <span class="rig-overlay"></span>
-              <span class="rig-text">
-                <h2>Lorem Ipsum DolorThis is small title</h2>
-                <p>This is description</p>
-              </span>
-          </a>
-      </li>
+      <% } %>
 
     </ul>
   </div>

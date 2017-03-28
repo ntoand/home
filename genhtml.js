@@ -2,6 +2,7 @@ var fs = require('fs'),
     ejs = require('ejs');
     path = require('path');
     data = require('./data.js');
+    mm = require('marky-mark');
 
 function ensureDirectoryExistence(filePath) {
   var dirname = path.dirname(filePath);
@@ -12,7 +13,7 @@ function ensureDirectoryExistence(filePath) {
   fs.mkdirSync(dirname);
 }
 
-function ejs2html(templatefile, ejsfile, outfile, options) {
+function ejs2html_page(templatefile, ejsfile, outfile, options) {
 
   dirname = path.dirname(ejsfile);
   basename = path.basename(ejsfile);
@@ -32,8 +33,15 @@ function ejs2html(templatefile, ejsfile, outfile, options) {
 }
 
 // main
-info = data.data.global;
-pages = data.data.pages;
+var info = data.data.global;
+var pages = data.data.pages;
+var works = mm.parseDirectorySync(__dirname + "/src/views/pages/work");
+
+works.sort(function(a, b){
+    if(a.filename > b.filename) return -1;
+    if(a.filename < b.filename) return 1;
+    return 0;
+})
 
 //preview or production?
 var baseurl = '';
@@ -43,8 +51,9 @@ if (process.argv.length == 3 && process.argv[2] === 'production') {
   outdir = 'dist';
 }
 
+// complile pages
 for (var i=0; i < pages.length; i++) {
-  templatefile = __dirname + '/' + info.templatefile;
+  templatefile = __dirname + '/' + info.pagetemplate;
   ejsfile = __dirname + '/' + info.pagedir + '/' + pages[i].ejs;
   outfile = __dirname + '/' + outdir + '/' + pages[i].ejs;
   outfile = outfile.replace('.ejs', '.html');
@@ -60,6 +69,7 @@ for (var i=0; i < pages.length; i++) {
   options.meta.description = pages[i].description;
   options.meta.keywords = pages[i].keywords;
   options.scripts = scripts;
+  options.works = works;
   options.filename = ejsfile;
   options.baseurl = baseurl;
 
@@ -68,8 +78,35 @@ for (var i=0; i < pages.length; i++) {
   for(var n=0; n < nlevels; n++)
     options.relative_path = options.relative_path + '../';
 
-  console.log('convert ' + ejsfile);
-  ejs2html(templatefile, ejsfile, outfile, options);
+  console.log('convert page: ' + ejsfile);
+  ejs2html_page(templatefile, ejsfile, outfile, options);
+}
+
+//compile works
+for(var i=0; i < works.length; i++) {
+  try {
+    console.log('covert work: ' + works[i].filename + works[i].filenameExtension )
+    data = fs.readFileSync(info.worktemplate, 'utf8');
+    data = data.replace(/{{RELATIVE_PATH}}/g, "");
+    data = data.replace('{{BODY_EJS}}', works[i].content);
+
+    var outfile = __dirname + '/' + outdir + '/work/' + works[i].filename + '.html';
+
+    options = {};
+    options.meta = {};
+    options.meta.title = works[i].meta.title;
+    options.meta.description = works[i].meta.description;
+    options.meta.keywords = works[i].meta.keywords;
+    options.filename =  info.worktemplate;
+    options.baseurl = baseurl;
+
+    var html = ejs.render(data, options);
+    ensureDirectoryExistence(outfile);
+    fs.writeFileSync(outfile, html);
+
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 console.log('ejs2html - Done!');
