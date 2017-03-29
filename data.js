@@ -4,7 +4,7 @@ exports.data = {
     worktemplate: "src/views/work-template.ejs",
     pagedir: "src/views/pages",
     sitename: "Toan Nguyen",
-    baseurl: "https://ntoand.github.io/home"
+    baseurl: "http://test.toaninfo.com"
   },
   pages: [
     {

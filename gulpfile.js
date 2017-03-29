@@ -19,7 +19,7 @@ var dir = 'preview';
 var env = getArg("--env");
 console.log(env);
 if (env === "production")
-  dir = 'dist';
+  dir = 'docs';
 
 gulp.task('clean', function () {
   del.sync([dir + '/**/*']);

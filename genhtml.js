@@ -48,7 +48,7 @@ var baseurl = '';
 var outdir = 'preview';
 if (process.argv.length == 3 && process.argv[2] === 'production') {
   baseurl = info.baseurl;
-  outdir = 'dist';
+  outdir = 'docs';
 }
 
 // complile pages

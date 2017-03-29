@@ -8,14 +8,14 @@
   <title>Contact</title>
   <meta name="description" content="Contact Me">
   <meta name="keywords" content="Toan Dinh Nguyen, contact" >
-  <link rel="shortcut icon" type="image/png" href="https://ntoand.github.io/home/public/imgs/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="http://test.toaninfo.com/public/imgs/favicon.png"/>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://ntoand.github.io/home/public/css/reset.css">
-  <link rel="stylesheet" href="https://ntoand.github.io/home/public/css/timeline.css">
-  <link rel="stylesheet" href="https://ntoand.github.io/home/public/css/style.css">
+  <link rel="stylesheet" href="http://test.toaninfo.com/public/css/reset.css">
+  <link rel="stylesheet" href="http://test.toaninfo.com/public/css/timeline.css">
+  <link rel="stylesheet" href="http://test.toaninfo.com/public/css/style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
@@ -31,7 +31,7 @@
         <div class="col-md-2 col-lg-2 col-sm-3 col-xs-12">
           <a href="/">
             <div class="logo">
-              <img class="logo-header" src="https://ntoand.github.io/home/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+              <img class="logo-header" src="http://test.toaninfo.com/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
             </div>
           </a>
         </div>
@@ -39,10 +39,10 @@
           <div class="mainmenu">
             <nav>
               <ul id="nav">
-                <li><a href="https://ntoand.github.io/home/">Home</a></li>
-                <li><a href="https://ntoand.github.io/home/work">Work</a></li>
-                <li><a href="https://ntoand.github.io/home/publication">Publication</a></li>
-                <li><a href="https://ntoand.github.io/home/contact">Contact</a></li>
+                <li><a href="http://test.toaninfo.com/">Home</a></li>
+                <li><a href="http://test.toaninfo.com/work">Work</a></li>
+                <li><a href="http://test.toaninfo.com/publication">Publication</a></li>
+                <li><a href="http://test.toaninfo.com/contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -54,7 +54,7 @@
   <div class="mobile-nav-area hidden-sm-up">
     <a href="/">
       <div class="logo">
-        <img class="logo-header-mobile" src="https://ntoand.github.io/home/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+        <img class="logo-header-mobile" src="http://test.toaninfo.com/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
       </div>
     </a>
     <div class="container">
@@ -64,10 +64,10 @@
 
       <nav id="mobile-nav">
         <ul>
-          <li><a href="https://ntoand.github.io/home/">Home</a></li>
-          <li><a href="https://ntoand.github.io/home/work">Work</a></li>
-          <li><a href="https://ntoand.github.io/home/publication">Publication</a></li>
-          <li><a href="https://ntoand.github.io/home/contact">Contact</a></li>
+          <li><a href="http://test.toaninfo.com/">Home</a></li>
+          <li><a href="http://test.toaninfo.com/work">Work</a></li>
+          <li><a href="http://test.toaninfo.com/publication">Publication</a></li>
+          <li><a href="http://test.toaninfo.com/contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -80,9 +80,8 @@
 
   <div class="container">
 
-    <div class="jumbotron">
-      <h1 class="section-header-dark">Contact Me</h1>
-    </div>
+    <h1 class="section-header-dark">Contact Me</h1>
+    <p>Have a question or just want to get in touch?</p>
 
     <div class="col-xs-12" style="height:30px;"></div>
 
@@ -164,7 +163,7 @@
     <div class="row">
       <div class="col-6 copyright">&copy; Toan Nguyen 2017</div>
       <div class="col-6 social">
-        <a class="btn btn-social-icon btn-linkedin"><span class="fa fa-linkedin"></span></a>
+        <a id="gototop" href="#" ><span class="fa fa-arrow-up"></span></a>
       </div>
     </row>
   </div>
@@ -181,6 +180,11 @@
   <script>
     $("#bars-icon").on("click", function() {
         $("#mobile-nav").toggleClass("open");
+    });
+
+    $("#gototop").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
     });
   </script>
 </body>

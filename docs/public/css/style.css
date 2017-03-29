@@ -202,11 +202,11 @@ Skill & award sections
 /*  Footer
 /*----------------------------------------*/
 footer {
-  background-color: #777;
-  color: #eee; }
+  background-color: #bbb;
+  color: #fff; }
 
 .copyright {
-  padding-top: 10px; }
+  /*padding-top: 10px;*/ }
 
 .social {
   text-align: right; }
@@ -429,3 +429,40 @@ footer {
   text-decoration: none;
   color: #41505C;
   font-weight: bold; }
+
+/*----------------------------------------*/
+/*  project
+/*----------------------------------------*/
+.project .title {
+  border-bottom: 2px solid #ddd; }
+
+.project b, .project strong {
+  font-weight: bold; }
+
+.project h1 {
+  padding-bottom: 10px; }
+
+.project h3 {
+  color: #777;
+  font-size: 14px;
+  padding: 5px 0; }
+
+.project .using {
+  padding-left: 20px; }
+
+.project li {
+  list-style-type: circle;
+  color: #777; }
+
+.project ul {
+  padding-bottom: 15px; }
+
+.project .image {
+  text-align: center;
+  padding: 10px 0; }
+
+.project .caption {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #777; }
