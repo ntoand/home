@@ -452,24 +452,30 @@ footer {
 		font-size: 14px;
 		padding: 5px 0;
 	}
-	.using {
-		padding-left: 20px;
-	}
 	li {
 		list-style-type: circle;
 		color: #777;
 	}
 	ul {
 		padding-bottom: 15px;
+		padding-left: 20px;
 	}
 	.image {
 		text-align: center;
 		padding: 10px 0;
+		font-weight: bold;
 	}
 	.caption {
 		font-size: 12px;
-		font-weight: bold;
-		padding-bottom: 10px;
+		padding-bottom: 4px;
 		color: #777;
+	}
+	.footnote {
+		font-size: 11px;
+		font-weight: bold;
+		padding: 2px 0;
+	}
+	sup {
+		font-size: 9px;
 	}
 }
