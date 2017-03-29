@@ -1,3 +1,14 @@
+---
+type: page
+subdir: work
+title: Work
+description: Toan Dinh Nguyen work portfolio
+keywords: Toan Dinh Nguyen, homepage, portfolio, research
+scripts:
+  - __BASEURL__/public/js/lib/mixitup.min.js
+  - __BASEURL__/public/js/work.min.js
+---
+
   <div class="col-xs-12" style="height:120px;"></div>
 
   <div class="container">
@@ -21,13 +32,13 @@
 
       <% if(works) %>
       <% for(var i=0; i<works.length; i++) {%>
-      <li class="mix <%= works[i].meta.categories %>">
-          <a class="rig-cell" href="<%= baseurl %>/work/<%= works[i].filename %>.html">
-              <img class="rig-img" src="<%= baseurl %>/<%= works[i].meta.image %>" />
+      <li class="mix <%= works[i].categories %>">
+          <a class="rig-cell" href="<%= works[i].link %>">
+              <img class="rig-img" src="<%= works[i].image %>" />
               <span class="rig-overlay"></span>
               <span class="rig-text">
-                <h2><%= works[i].meta.title %></h2>
-                <p><%= works[i].meta.description %></p>
+                <h2><%= works[i].title %></h2>
+                <p><%= works[i].description %></p>
               </span>
           </a>
       </li>

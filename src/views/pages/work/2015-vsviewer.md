@@ -1,4 +1,6 @@
 ---
+type: work
+subdir: work
 title: Virtual slice viewer
 description: Virtual slice viewer for the CAVE2
 keywords: visualisation, virtual slice, opengl, CAVE system

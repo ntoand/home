@@ -1,4 +1,6 @@
 ---
+type: work
+subdir: work
 title: MPEG-4 to H.264 transcoder
 description: C++ implementation of video transcoder
 keywords: research, video coding, transcoder

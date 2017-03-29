@@ -1,3 +1,15 @@
+---
+type: page
+subdir:
+title: Home
+description: Toan Dinh Nguyen homepage
+keywords: Toan Dinh Nguyen, homepage, portfolio, research
+scripts:
+  - https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js
+  - https://www.gstatic.com/charts/loader.js
+  - __BASEURL__/public/js/lib/timeline.min.js
+  - __BASEURL__/public/js/index.min.js
+---
 
   <section id="section-intro">
   	<div class="intro-area">

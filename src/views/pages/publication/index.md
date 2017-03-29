@@ -1,3 +1,14 @@
+---
+type: page
+subdir: publication
+title: Publication
+description: Toan Dinh Nguyen publication
+keywords: Toan Dinh Nguyen, homepage, research
+scripts:
+  - __BASEURL__/public/js/lib/mixitup.min.js
+  - __BASEURL__/public/js/publication.min.js
+---
+
   <div class="col-xs-12" style="height:120px;"></div>
 
   <div class="container">

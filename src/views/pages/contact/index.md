@@ -1,3 +1,11 @@
+---
+type: page
+subdir: contact
+title: Contact
+description: Contact me
+keywords: Toan Dinh Nguyen, contact
+---
+
 <div class="col-xs-12" style="height:120px;"></div>
 
   <div class="container">
