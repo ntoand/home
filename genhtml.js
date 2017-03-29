@@ -15,9 +15,6 @@ function ensureDirectoryExistence(filePath) {
 
 function ejs2html_page(templatefile, ejsfile, outfile, options) {
 
-  //dirname = path.dirname(ejsfile);
-  //basename = path.basename(ejsfile);
-
   try {
     data = fs.readFileSync(templatefile, 'utf8');
     data = data.replace('{{BODY_EJS}}', ejsfile);
