@@ -442,6 +442,12 @@ footer {
 .project h1 {
   padding-bottom: 10px; }
 
+.project h2 {
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555; }
+
 .project h3 {
   color: #555;
   font-size: 14px;

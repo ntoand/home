@@ -84,9 +84,24 @@
 
   <div class="col-xs-12" style="height:20px;"></div>
 
-  <h2 id="a-blog-post">A Blog Post</h2>
-<p>A blog post about how I can&#39;t believe Mark Wahlberg is Marky Mark.
-Written in markdown of course.</p>
+  <h3 id="-platforms-windows"><strong>Platforms:</strong> Windows</h3>
+<h3 id="-built-with-c-visual-studio-c-"><strong>Built with:</strong> C++, Visual Studio C++</h3>
+<p>Efficient downscaling in a transcoder is important when the output should be converted to a lower resolution video. In this work, I suggest a fast spatial downscaling method for transcoding video from MPEG-4 SP (with Simple Profile) to H.264. Based on frame image characteristics and motion information in MPEG-4 decoder, I limit motion modes, generate prediction motion vectors and build an adaptive search range for motion estimation in H.264 encoder. Simulation results show that the transcoder considerably reduces transcoding time while video quality is kept almost optimal.</p>
+<p>The transcoder converts MPEG-4 Simple Profile bitstream to H.264 Main Profile bitstream. Notice:</p>
+<ul>
+<li>The MPEG-4 bitstream must be encoded in Simple Profile</li>
+<li>The transcoder not using Rate Distortion Optimization</li>
+</ul>
+<div class="image">
+  <img src="/public/imgs/work/2007-transcoder/02.jpg" alt="transcoder diagram"></img>
+  <p class="caption">Transcoder diagram</p>
+</div>
+
+<p>In this architecture the input MPEG-4 bitstream is decoded by MPEG-4 decoder. The transcoder decodes and encodes frame by frame. After decoding one frame, the frame data is transferred to H.264 encoder as input frame and the motion estimation is reused to reduce encoding time. Because the motion compensation module in H.264 encoder accounts 60-70% of total cost, reusing motion information from MPEG-4 decoder significantly reduces encode time.</p>
+<div class="image">
+  <img src="/public/imgs/work/2007-transcoder/03.jpg" alt="result"></img>
+  <p class="caption">Some results</p>
+</div>
 
   <div class="col-xs-12" style="height:40px;"></div>
 

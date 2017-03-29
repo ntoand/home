@@ -84,8 +84,31 @@
 
   <div class="col-xs-12" style="height:20px;"></div>
 
-  <h3 id="__platforms-__-windows"><strong>Platforms:</strong> Windows</h3>
-<p>Hello</p>
+  <h3 id="-platforms-windows"><strong>Platforms:</strong> Windows</h3>
+<h3 id="-built-with-c-visual-studio-c-"><strong>Built with:</strong> C++, Visual Studio C++</h3>
+<h2 id="introduction">Introduction</h2>
+<p>Distributed Video Coding (DVC) is a new video paradigm based on two information theorems: the Slepian-Wolf and Wyner-Ziv. In this new video paradigm, the source statistic is exploited at the decoder only so the complexity is shifted from the encoder to the decoder. Since the encoding requirement is much lower than that of conventional video codec, the DVC codec is very useful in some emerging applications such as wireless low-power surveillance systems, wireless PC cameras, multimedia sensor network and mobile camera phones.</p>
+<h2 id="project-objective">Project objective</h2>
+<p>The main objective of the project is to develop a working distributed video coding tool with a strong potential for new applications. We will focus on building a working C DVC version with acceptable performance. Our DVC codec is designed and implemented based on the well-known Stanford and DISCOVER architectures. Some advanced modules such as minimum rate estimation may be included in our implementation to improve the codec system.</p>
+<h2 id="main-features">Main features</h2>
+<ul>
+<li>Our design is based on feedback-channel DVC systems (Stanford and DISCOVER).</li>
+<li>We focus on implementing a DCT domain DVC codec.</li>
+<li>Using DCT block 4x4 and LPDCA with code length 1584 bits for QCIF video format, and code length 6336 for CIF video format.</li>
+<li>Using H.264 for coding Intra frame.</li>
+<li>Offline Laplacian parameters (sent from the encoder to the decoder).</li>
+<li>The system is developed in Visual C with only standard libraries.</li>
+<li>The system includes the configuration file to control the system parameters.</li>
+<li>The system works fast enough (below 100ms for encoding and around 2 minutes for decoding one WZ frame with QCIF format (the decoding time depends on desired quality)).</li>
+<li>The system is comparable with available DVC codec systems at least in slow motion test video sequences.</li>
+<li>The system is extendable, clear code and easy to understand.</li>
+<li>This version supports the QCIF, CIF, and VGA video format with Y component (other components can be extended easily).</li>
+<li>This version supports the GOP is 2 (1 WZ frame is inserted between 2 key frames).</li>
+</ul>
+<div class="image">
+  <img src="/public/imgs/work/2007-dvc/02.jpg" alt="DVC diagram"></img>
+  <p class="caption">Diagram</p>
+</div>
 
   <div class="col-xs-12" style="height:40px;"></div>
 

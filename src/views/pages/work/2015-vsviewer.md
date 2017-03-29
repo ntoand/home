@@ -12,7 +12,7 @@ image: public/imgs/work/2015-vsviewer/01.jpg
 
 ### **Built with:** CMake, C++, OpenMPI, OpenGL, EVL Omicron
 
-### **Features:**
+### **Main features:**
 
 - Support DeepZoom and OpenSlide inputs (histology images, high-resolution images)
 - Render massive resolution images on desktop and on visualisation cluster e.g. the CAVE2
