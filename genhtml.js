@@ -15,13 +15,12 @@ function ensureDirectoryExistence(filePath) {
 
 function ejs2html_page(templatefile, ejsfile, outfile, options) {
 
-  dirname = path.dirname(ejsfile);
-  basename = path.basename(ejsfile);
+  //dirname = path.dirname(ejsfile);
+  //basename = path.basename(ejsfile);
 
   try {
     data = fs.readFileSync(templatefile, 'utf8');
-    data = data.replace(/{{RELATIVE_PATH}}/g, options.relative_path);
-    data = data.replace('{{BODY_EJS}}', basename);
+    data = data.replace('{{BODY_EJS}}', ejsfile);
 
     var html = ejs.render(data, options);
     ensureDirectoryExistence(outfile);
@@ -51,10 +50,10 @@ if (process.argv.length == 3 && process.argv[2] === 'production') {
   outdir = 'docs';
 }
 
-// complile pages
+// generate pages
 for (var i=0; i < pages.length; i++) {
   templatefile = __dirname + '/' + info.pagetemplate;
-  ejsfile = __dirname + '/' + info.pagedir + '/' + pages[i].ejs;
+  //ejsfile = __dirname + '/' + info.pagedir + '/' + pages[i].ejs;
   outfile = __dirname + '/' + outdir + '/' + pages[i].ejs;
   outfile = outfile.replace('.ejs', '.html');
 
@@ -70,22 +69,17 @@ for (var i=0; i < pages.length; i++) {
   options.meta.keywords = pages[i].keywords;
   options.scripts = scripts;
   options.works = works;
-  options.filename = ejsfile;
+  options.filename = info.pagetemplate;
   options.baseurl = baseurl;
 
-  var nlevels = (pages[i].ejs.match(/\//g) || []).length + 1;
-  options.relative_path = '';
-  for(var n=0; n < nlevels; n++)
-    options.relative_path = options.relative_path + '../';
-
-  console.log('convert page: ' + ejsfile);
-  ejs2html_page(templatefile, ejsfile, outfile, options);
+  console.log('generate page: ' + __dirname + '/' + info.pagedir + '/' + pages[i].ejs);
+  ejs2html_page(templatefile, pages[i].ejs, outfile, options);
 }
 
-//compile works
+//generate works
 for(var i=0; i < works.length; i++) {
   try {
-    console.log('covert work: ' + works[i].filename + works[i].filenameExtension )
+    console.log('generate work: ' + works[i].filename + works[i].filenameExtension )
     data = fs.readFileSync(info.worktemplate, 'utf8');
     data = data.replace(/{{RELATIVE_PATH}}/g, "");
     data = data.replace('{{BODY_EJS}}', works[i].content);
@@ -109,4 +103,4 @@ for(var i=0; i < works.length; i++) {
   }
 }
 
-console.log('ejs2html - Done!');
+console.log('genhtml - Done!');
