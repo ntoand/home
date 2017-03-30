@@ -3,7 +3,7 @@ type: work
 subdir: work
 title: Pair correlation
 description: Calculate pair correlation for FCS
-keywords: pair correlation, cross correlation, self correlation, microscopy, Fluorescence Correlation Spectroscopy
+keywords: pair correlation, cross correlation, auto correlation, microscopy, Fluorescence Correlation Spectroscopy
 categories: data-processing
 image: public/imgs/work/2017-correlation/01.jpg
 ---
@@ -12,7 +12,7 @@ image: public/imgs/work/2017-correlation/01.jpg
 
 ### **Built with:** Matlab
 
-This is an easy-to-use Matlab GUI program that can calculate pair correlation<sup>[1](#footnote1)</sup> similarly to "Carpet analysis" function of <a href="http://www.lfd.uci.edu/globals/" target="_blank">SimFCS</a> program. The program can take fluorescence correlation spectroscopy data (.tiff) as input.
+This is an easy-to-use Matlab GUI program that can calculate auto and cross correlation<sup>[1](#footnote1)</sup> similarly to "Carpet analysis" function in <a href="http://www.lfd.uci.edu/globals/" target="_blank">SimFCS</a> program. The program can take fluorescence correlation spectroscopy data (.tiff) as input.
 
 <div class="image">
   <img src="<%= baseurl %>/public/imgs/work/2017-correlation/02.jpg" alt="Main window to calculate pair correlation"></img>
