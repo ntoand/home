@@ -1,7 +1,7 @@
 ---
 type: work
 subdir: work
-title: Multimodality research imaging informatics repository
+title: Imaging informatics repository
 description: Design, implementation and operation
 keywords: multimodality, imaging, informatics, repository
 categories: system

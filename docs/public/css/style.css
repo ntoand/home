@@ -387,7 +387,7 @@ footer {
 /* If have captions */
 .rig-text {
   display: block;
-  padding: 0 20px;
+  /*padding:0 20px;*/
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -398,19 +398,24 @@ footer {
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-weight: normal !important;
-  top: 80%;
+  /*top:80%;*/
+  bottom: -44px;
   color: white;
   opacity: 0.8;
   filter: alpha(opacity=0);
   /*For older IE*/
   transform: translateY(0px);
-  transition: all .3s; }
+  transition: all .3s;
+  text-align: center; }
 
 .rig-text h2 {
   font-size: 14px;
   text-transform: uppercase;
-  color: #d82c2e;
-  font-weight: bold; }
+  /*color: #d82c2e;*/
+  color: #fff;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px;
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .rig-text p {
   font-size: 12px;
@@ -418,14 +423,16 @@ footer {
   color: #fff; }
 
 #rig li:hover .rig-text {
-  transform: translateY(-30px);
+  transform: translateY(-44px);
   opacity: 1.0; }
 
 #rig li:hover .rig-text p {
   opacity: 1.0; }
 
 #rig li:hover .rig-text h2 {
-  color: #fff600; }
+  color: #fff600;
+  text-shadow: 0 0 0;
+  background-color: transparent; }
 
 @media (max-width: 9000px) {
   #rig li {
