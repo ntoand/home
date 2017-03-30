@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Pair correlation</title>
+  <meta name="description" content="Calculate pair correlation for FCS">
+  <meta name="keywords" content="pair correlation, cross correlation, self correlation, microscopy, Fluorescence Correlation Spectroscopy" >
+  <link rel="shortcut icon" type="image/png" href="/public/imgs/favicon.png"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/timeline.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+
+
+<header>
+
+  <div class="header-area hidden-xs-down">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-12">
+          <a href="/">
+            <div class="logo">
+              <img class="logo-header" src="/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-10 col-lg-10 col-sm-9 hidden-xs">
+          <div class="mainmenu">
+            <nav>
+              <ul id="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/publication">Publication</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav-area hidden-sm-up">
+    <a href="/">
+      <div class="logo">
+        <img class="logo-header-mobile" src="/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+      </div>
+    </a>
+    <div class="container">
+      <div class="row bars-area">
+        <span id="bars-icon"><i class="fa fa-bars fa-2x"></i></span>
+      </div>
+
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/publication">Publication</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+
+<div class="col-xs-12" style="height:120px;"></div>
+
+<div class="container project">
+
+  <h1 class="section-header-dark title">Pair correlation</h1>
+
+  <div class="col-xs-12" style="height:20px;"></div>
+
+  <h3 id="-platforms-windows-macos-linux"><strong>Platforms:</strong> Windows, MacOS, Linux</h3>
+<h3 id="-built-with-matlab"><strong>Built with:</strong> Matlab</h3>
+<p>This is an easy-to-use Matlab GUI program that can calculate pair correlation<sup><a href="#footnote1">1</a></sup> similarly to &quot;Carpet analysis&quot; function of <a href="http://www.lfd.uci.edu/globals/" target="_blank">SimFCS</a> program. The program can take fluorescence correlation spectroscopy data (.tiff) as input.</p>
+<div class="image">
+  <img src="/public/imgs/work/2017-correlation/02.jpg" alt="Main window to calculate pair correlation"></img>
+  <p class="caption">Main window to calculate pair correlation</p>
+  <br/>
+
+  <img src="/public/imgs/work/2017-correlation/03.jpg" alt="Display line profile and peaks"></img>
+  <p class="caption">Display line profile and peaks</p>
+  <br/>
+
+  <img src="/public/imgs/work/2017-correlation/04.jpg" alt="Generate reference intensity profile"></img>
+  <p class="caption">Generate reference intensity profile</p>
+
+</div>
+
+<div class="footnote"><a name="footnote1">1</a>: E. Hinde, K. Thammasiraphop, H. T. T. Duong, J. Yeow, B. Karagoz, C. Boyer, J. J. Gooding, K. Gaus, Pair correlation microscopy reveals the role of nanoparticle shape in intracellular transport and site of drug release. Nat Nano 2016</div>
+
+  <div class="col-xs-12" style="height:40px;"></div>
+
+</div>
+
+<footer>
+  <div class="col-xs-12" style="height:30px;"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 copyright">&copy; Toan Nguyen 2017</div>
+      <div class="col-6 social">
+        <a id="gototop" href="#" ><span class="fa fa-arrow-up"></span></a>
+      </div>
+    </row>
+  </div>
+  <div class="col-xs-12" style="height:30px;"></div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+  
+
+  <script>
+    $("#bars-icon").on("click", function() {
+        $("#mobile-nav").toggleClass("open");
+    });
+
+    $("#gototop").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  </script>
+</body>
+</html>
+
