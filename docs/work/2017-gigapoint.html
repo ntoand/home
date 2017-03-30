@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Gigapoint - display large point datasets</title>
+  <meta name="description" content="Display large datasets on desktop/CAVE2">
+  <meta name="keywords" content="visualisation, opengl, potree, pointcloud" >
+  <link rel="shortcut icon" type="image/png" href="/public/imgs/favicon.png"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/timeline.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+
+
+<header>
+
+  <div class="header-area hidden-xs-down">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-12">
+          <a href="/">
+            <div class="logo">
+              <img class="logo-header" src="/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-10 col-lg-10 col-sm-9 hidden-xs">
+          <div class="mainmenu">
+            <nav>
+              <ul id="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/publication">Publication</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav-area hidden-sm-up">
+    <a href="/">
+      <div class="logo">
+        <img class="logo-header-mobile" src="/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+      </div>
+    </a>
+    <div class="container">
+      <div class="row bars-area">
+        <span id="bars-icon"><i class="fa fa-bars fa-2x"></i></span>
+      </div>
+
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/publication">Publication</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+
+<div class="col-xs-12" style="height:120px;"></div>
+
+<div class="container project">
+
+  <h1 class="section-header-dark title">Gigapoint - display large point datasets</h1>
+
+  <div class="col-xs-12" style="height:20px;"></div>
+
+  <h3 id="-platforms-linux-macos"><strong>Platforms:</strong> Linux, MacOS</h3>
+<h3 id="-built-with-cmake-c-omegalib-opengl"><strong>Built with:</strong> CMake, C++, Omegalib, OpenGL</h3>
+<p>Gigapoint is an <a href="https://github.com/uic-evl/omegalib" target="_blank">Omegalib</a> module to display large points datasets (e.g. LIDAR data) on desktop and visualisation cluster e.g. the CAVE2.</p>
+<h3 id="-features-"><strong>Features</strong></h3>
+<ul>
+<li>Use <a href="http://potree.org/" target="_blank">potree</a> data as input</li>
+<li>Asynchronous and multi-threading file loading</li>
+<li>Support stereo display</li>
+<li>Eye Doom Lighting (EDL) filter</li>
+<li>Support live data update from a SLAM system</li>
+<li>Support data interaction with multiple wands e.g. track finding</li>
+</ul>
+<div class="image">
+  <img src="/public/imgs/work/2017-gigapoint/02.jpg" alt="Century mine dataset"></img>
+  <p class="caption"><a href="https://en.wikipedia.org/wiki/Century_Mine" target="_blank">Century mine</a> (350 million points) dataset <sup><a href="#footnote1">1</a></sup></p>
+
+  <img src="/public/imgs/work/2017-gigapoint/03.jpg" alt="Century mine surrounding dataset"></img>
+  <p class="caption">Century mine surrouding dataset (750 million points) <sup><a href="#footnote1">1</a></sup></p>
+
+  <img src="/public/imgs/work/2017-gigapoint/04.jpg" alt="Coloured by evelation with EDL filter"></img>
+  <p class="caption">Coloured by evelation with EDL filter</p>
+
+</div>
+
+<div class="footnote"><a name="footnote1">1</a>:LIDAR data provided by Steve Micklethwaite to MIVP</div>
+
+  <div class="col-xs-12" style="height:40px;"></div>
+
+</div>
+
+<footer>
+  <div class="col-xs-12" style="height:30px;"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 copyright">&copy; Toan Nguyen 2017</div>
+      <div class="col-6 social">
+        <a id="gototop" href="#" ><span class="fa fa-arrow-up"></span></a>
+      </div>
+    </row>
+  </div>
+  <div class="col-xs-12" style="height:30px;"></div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+  
+
+  <script>
+    $("#bars-icon").on("click", function() {
+        $("#mobile-nav").toggleClass("open");
+    });
+
+    $("#gototop").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  </script>
+</body>
+</html>
+
