@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Multimodality research imaging informatics repository</title>
+  <meta name="description" content="Design, implementation and operation">
+  <meta name="keywords" content="multimodality, imaging, informatics, repository" >
+  <link rel="shortcut icon" type="image/png" href="/public/imgs/favicon.png"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/timeline.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+
+
+<header>
+
+  <div class="header-area hidden-xs-down">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-12">
+          <a href="/">
+            <div class="logo">
+              <img class="logo-header" src="/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+            </div>
+          </a>
+        </div>
+        <div class="col-md-10 col-lg-10 col-sm-9 hidden-xs">
+          <div class="mainmenu">
+            <nav>
+              <ul id="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/work">Work</a></li>
+                <li><a href="/publication">Publication</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-nav-area hidden-sm-up">
+    <a href="/">
+      <div class="logo">
+        <img class="logo-header-mobile" src="/public/imgs/tn_logo_full.png" alt="Toan Nguyen logo">
+      </div>
+    </a>
+    <div class="container">
+      <div class="row bars-area">
+        <span id="bars-icon"><i class="fa fa-bars fa-2x"></i></span>
+      </div>
+
+      <nav id="mobile-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/publication">Publication</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+
+<div class="col-xs-12" style="height:120px;"></div>
+
+<div class="container project">
+
+  <h1 class="section-header-dark title">Multimodality research imaging informatics repository</h1>
+
+  <div class="col-xs-12" style="height:20px;"></div>
+
+  <h2 id="introduction">Introduction</h2>
+<p>I contributed to the design, implementation and operation of a multi-modality research imaging data management system that manages imaging data obtained from biomedical imaging scanners operated at Monash Biomedical Imaging (MBI), Monash University in Melbourne, Australia. In addition to Digital Imaging and Communications in Medicine (DICOM) images, raw data and non-DICOM biomedical data can be archived and distributed by the system. Imaging data are annotated with meta-data according to a study-centric data model and, therefore, scientific users can find, download and process data easily.</p>
+<h2 id="result">Result</h2>
+<p>The research imaging data management system ensures long-term usability, integrity inter-operability and integration of large imaging data. Research users can securely browse and download stored images and data, and upload processed data via subject-oriented informatics frameworks including the Distributed and Reflective Informatics System (DaRIS), and the Extensible Neuroimaging Archive Toolkit (XNAT).</p>
+<h2 id="requirement-features">Requirement / Features</h2>
+<ul>
+<li>imaging data from DICOM capable modalities (e.g. MRI) must be, to a large extent, automatically routed from the point of acquisition to the imaging informatics system</li>
+<li>imaging and non-imaging data from non-DICOM capable modalities (e.g. EEG) must be, to a large extent, easily manually uploaded to the imaging informatics system or uploaded using scripts and command line tools</li>
+<li>imaging and non-imaging data and meta-data must be stored on secure, reliable, research grade backed-up storage</li>
+<li>upon ingest of DICOM-format images, standard meta-data should, to a large extent, be automatically extracted (&quot;harvested&quot;) from the DICOM files and recorded in the imaging informatics system</li>
+<li>human imaging data must be accessible by standard radiology software for review by the MBI radiologist</li>
+<li>imaging and non-imaging data must be organised in a study centric fashion, supporting multi-modal and longitudinal image collections per study subject</li>
+<li>an end user tool should exist to aid users in defining the set of meta-data to associate with a study and its subjects, and in defining the data acquisition(s) that comprise the study</li>
+<li>all data must be uniquely identifiable without the need for real subject names or identifying information other than date of birth and gender</li>
+<li>imaging and non-imaging data and meta-data must be available via a secure web portal to the owner (research leader) and their delegate/s</li>
+<li>imaging and non-imaging data must be transferable from within the secure web portal to the accessing workstation (&quot;download&quot;) or to Monash University&#39;s high performance computing facility MASSIVE (&quot;transfer&quot;)</li>
+<li>users should be able to manually package and upload processed data and record provenance (e.g. link to the source data set/s)</li>
+<li>and a command-line based tool must be available that enables search of the image informatics system, and upload and download of data collections, for use in batch processing workflows.</li>
+</ul>
+<div class="image">
+  <img src="/public/imgs/work/2014-informatics/02.jpg" alt="The acquisition and automated data flows"></img>
+  <p class="caption">The acquisition and automated data flows</p>
+  <br/>
+
+  <img src="/public/imgs/work/2014-informatics/03.jpg" alt="User interaction"></img>
+  <p class="caption">User interaction</p>
+  <br/>
+
+  <img src="/public/imgs/work/2014-informatics/04.jpg" alt="User interface for DaRIS"></img>
+  <p class="caption">User interface for DaRIS. The web based user interface of DaRIS showing the main interface panel in (a) and the &quot;cart&quot; functionality in (b)</p>
+
+</div>
+
+  <div class="col-xs-12" style="height:40px;"></div>
+
+</div>
+
+<footer>
+  <div class="col-xs-12" style="height:30px;"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 copyright">&copy; Toan Nguyen 2017</div>
+      <div class="col-6 social">
+        <a id="gototop" href="#" ><span class="fa fa-arrow-up"></span></a>
+      </div>
+    </row>
+  </div>
+  <div class="col-xs-12" style="height:30px;"></div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+  
+
+  <script>
+    $("#bars-icon").on("click", function() {
+        $("#mobile-nav").toggleClass("open");
+    });
+
+    $("#gototop").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  </script>
+</body>
+</html>
+
