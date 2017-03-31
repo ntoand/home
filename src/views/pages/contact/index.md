@@ -1,7 +1,7 @@
 ---
 type: page
 subdir: contact
-title: Toan Nguyen | Contact
+title: Toan Nguyen - Contact
 description: Contact me
 keywords: Toan Dinh Nguyen, contact
 ---

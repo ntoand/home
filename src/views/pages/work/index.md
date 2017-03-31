@@ -1,7 +1,7 @@
 ---
 type: page
 subdir: work
-title: Toan Nguyen | Work
+title: Toan Nguyen - Work
 description: Toan Dinh Nguyen work portfolio
 keywords: Toan Dinh Nguyen, homepage, portfolio, research
 scripts:

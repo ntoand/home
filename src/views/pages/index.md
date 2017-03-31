@@ -1,7 +1,7 @@
 ---
 type: page
 subdir:
-title: Toan Nguyen | Home
+title: Toan Nguyen - Home
 description: Toan Dinh Nguyen homepage
 keywords: Toan Dinh Nguyen, homepage, portfolio, research
 scripts:
