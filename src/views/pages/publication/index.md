@@ -1,7 +1,7 @@
 ---
 type: page
 subdir: publication
-title: Publication
+title: Toan Nguyen | Publication
 description: Toan Dinh Nguyen publication
 keywords: Toan Dinh Nguyen, homepage, research
 scripts:
