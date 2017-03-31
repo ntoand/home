@@ -553,3 +553,30 @@ footer {
 		font-size: 9px;
 	}
 }
+
+/*----------------------------------------*/
+/*  404
+/*----------------------------------------*/
+.page404 {
+	text-align: center;
+}
+.page404 {
+	h1 {
+		font-size: 80px;
+		font-weight: 100;
+		padding: 20px 0;
+	}
+	h2 {
+		color: rgba(0,0,0,0.5);
+		line-height: 1.6;
+		font-weight: bold;
+		padding-bottom: 40px;
+		font-size: 30px;
+	}
+	h3 {
+		color: #777;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 2;
+	}
+}
